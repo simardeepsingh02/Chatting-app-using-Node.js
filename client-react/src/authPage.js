@@ -11,7 +11,7 @@ const AuthPage = (props) => {
   const onLogin = (e) => {
     e.preventDefault();
     axios
-      .post("http://chatting-app-using-node-js.onrender.com/login", { username, secret })
+      .post("https://chatting-app-using-node-js.onrender.com/login", { username, secret })
       .then((r) => props.onAuth({ ...r.data, secret })) // NOTE: over-ride secret
       .catch((e) => console.log(JSON.stringify(e.response.data)));
   };
@@ -19,7 +19,7 @@ const AuthPage = (props) => {
   const onSignup = (e) => {
     e.preventDefault();
     axios
-      .post("http://chatting-app-using-node-js.onrender.com/signup", {
+      .post("https://chatting-app-using-node-js.onrender.com/signup", {
         username,
         secret,
         email,
